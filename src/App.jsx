@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './App.css'
-import axios from 'axios'
 import CardCharacter from './components/CardCharacter'
 
 //public: 1c4aee6a89f573f35cc57ee82e6d38e9

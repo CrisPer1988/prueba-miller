@@ -17,3 +17,31 @@
     padding: 20px;
     
 }
+
+.bar__progress {
+    background-color: green;
+    height: 30px;
+}
+
+.content__modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.modal {
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+
+.modal-show {
+    transform: scale(1);
+    
+    width: 60%;
+    height: 25%;
+    
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 255, 0.403);
+    color: white;
+}
