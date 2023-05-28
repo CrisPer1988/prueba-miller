@@ -1,33 +1,38 @@
 import React, { useEffect } from 'react'
 import "./styles/barProgress.css"
 
-const BarProgress = ({oneCharacter}) => {
+const BarProgress = ({progress}) => {
 
-    const dataOne = oneCharacter?.map(char => {
-            return char.series.available
-        })
-
-    console.log(dataOne);
-    
 
 
   return (
-    <div className='content__bar'>
-        
- <div className='bar__progress'
-            style={{
-                background: `linear-gradient(90deg, #77dad4 0, #b0e3e0 ${dataOne}%, rgb(231, 231, 231) ${dataOne}% 100%)`,
-              }}
-            >
-                BARRA PROGRESIVA
-            </div> 
-            <div>
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ab expedita doloremque. Quis quasi soluta voluptas ipsam unde eos non dolorum? Ullam fugit voluptatem repellat sapiente excepturi voluptates praesentium.</h3>
-            </div>
-            <div>
-                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ab expedita doloremque. Quis quasi soluta voluptas ipsam unde eos non dolorum? Ullam fugit voluptatem repellat sapiente excepturi voluptates praesentium.</h3>
-            </div>
+    <div className="container__progress">
+    {progress >= 0 && (
+    <div className="content__barra">
+      <div
+        className="bar__progress"
+        style={{
+          background: `linear-gradient(90deg, #10dad4 0, #50dad4 ${progress}%, rgb(231, 231, 231) ${progress}% 100%)`,
+        }}
+      >
+        BARRA PROGRESIVA
+      </div>
+      </div>
+    )
+    
+    }
+    <div>
+      <h3>Video</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem blanditiis deserunt adipisci veniam vel explicabo impedit sint fuga iure suscipit! Facilis veniam commodi quod velit magnam, tempora rerum accusamus nam?</p>
     </div>
+    <div>
+      <h3>Imagen</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, qui? Ipsam obcaecati provident molestias unde ducimus sint consectetur natus accusantium beatae quisquam quam, cum itaque illo voluptatibus commodi magni veniam.</p>
+    </div>
+    
+    </div>
+
+    
   )
 }
 
